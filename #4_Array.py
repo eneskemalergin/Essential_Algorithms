@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Chapter 4 #
 #-----------#
-
+import math
 # Question 1#
 #------------------------------------------------------------------------------#
 '''
@@ -15,7 +15,20 @@ Here −x is the mean (average) of the values in the array, and the summation
 symbol Σ means to add up all the xi values as i varies from 0 to N – 1.
 '''
 
+def findSampleVariance(list):
+    # Finding the average
+    total = 0
+    for i in list:
+        total += list[i]
 
+    average = total / len(list)
+
+    # Find the sample variance
+    sum_of_squares = 0
+    for j in list:
+        sum_of_squares = sum_of_squares + (list[i] - average) * (list[i] - average)
+
+    return sum_of_squares / len(list)
 
 
 #------------------------------------------------------------------------------#
@@ -27,7 +40,12 @@ array of numbers where the sample standard deviation is
 defi ned to be the square root of the sample variance.
 '''
 
+def FindSampleStandartDeviation(list):
+    # Finding the sample variance
+    variance = findSampleVariance(list)
 
+    # return the standart deviation
+    return sqrt(variance)
 
 #------------------------------------------------------------------------------#
 
@@ -38,7 +56,21 @@ Write an algorithm to fi nd the median of a sorted one-dimensional array.
 (Be sure to handle arrays holding an even or odd number of items.)
 '''
 
+def FindMedian(list):
 
+    if (len(list) % 2 == 0):
+        # The array has even length
+        # Return the average of the two middle items
+        middle = len(list) / 2
+        return (list[middle -1] + list[middle]) / 2
+
+    else:
+        # The array has odd length
+        #  Return the middle item
+        middle = len(list) - 1 / 2
+        return list[middle]
+
+    
 
 
 #------------------------------------------------------------------------------#
@@ -49,6 +81,13 @@ Write an algorithm to fi nd the median of a sorted one-dimensional array.
 The section “Removing Items” explained how to remove an item from a
 linear array. Write the algorithm in pseudocode.
 '''
+def RemoveItem(list, index):
+    # Slide items left 1 position to fill in where the item is
+
+    for i in range(index, len(list) - 1):
+        list[i - 1] = list[i]
+
+
 
 #------------------------------------------------------------------------------#
 
@@ -60,7 +99,11 @@ triangular arrays” because the values are stored in the lower-left half of
 the array. How would you modify that kind of array to produce an upper
 triangular array with the values stored in the upper-right corner?
 '''
+def FindIndex(r,c):
+    return ((r - 1) * (r - 1) + (r - 1)) / 2 + c
 
+def FindIndex(r,c):
+    return ((c - 1) * (c - 1) + (c - 1)) / 2 + r
 #------------------------------------------------------------------------------#
 
 # Question 6
@@ -72,6 +115,9 @@ upper-left half of the array? What is the relationship between row and
 column for the entries in the array?
 '''
 
+def FindIndex(r, c):
+    r = N - 1 - r
+    return ((r - 1) * (r - 1) + (r - 1)) / 2 + c
 
 
 
@@ -86,25 +132,14 @@ that fi lls entries on or below the main diagonal with 1s and entries above
 the main diagonal with 0s.
 '''
 
-
-
-
-#------------------------------------------------------------------------------#
-
-
-# Question 8
-
-'''
-Consider the diagonal of a rectangular array that starts in the last column
-of the fi rst row and extends left and down until it reaches the bottom or
-left edge of the array. Write an algorithm that fi lls the entries on or above
-the diagonal with 1s and entries below the diagonal with 0s.
-'''
-
-
-
-
-
+def FillListLLtoUR(values[,], ll_value, ur_value):
+    for row in values:
+        for col in values:
+            if row >= col :
+                values[row, col] = ur_value
+            else:
+                values[row, col] = ll_value
+                
 #------------------------------------------------------------------------------#
 
 # Question 9
@@ -114,7 +149,14 @@ Write an algorithm that fi lls each item in a rectangular array with the
 distance from that entry to the nearest edge of the array.
 '''
 
+def FillListWithDistances(values[,]):
+    max_row = values.GetUpperBound(0)
+    max_col = values.GetUpperBound(1)
 
+    for row in range(max_row):
+        for col in range(max_col):
+            values[row, col] = Minimum(row, col, max_row - row, max_col - col)
+            
 
 
 #------------------------------------------------------------------------------#
@@ -128,16 +170,18 @@ j ≤ i and k ≤ j. How would you continue to extend this method for even
 higher dimensions?
 '''
 
+def NumCellsForTriangleRows(rows):
+    return (rows * rows + rows ) / 2
+
+def NumCellsForTetrahedralRows(rows):
+    return (rows * rows * rows + 3 * rows * rows + 2 * rows) / 6
+
+def RowColumnHeightToIndex(row, col, hgt):
+    return NumCellsForTriangleRows + NumCellsForTetrahedralRows +hgt
+
 
 #------------------------------------------------------------------------------#
 
-#Question 11
-
-'''
-How could you make a sparse triangular array?
-'''
-
-#------------------------------------------------------------------------------#
 
 # Question 12
 
@@ -145,6 +189,11 @@ How could you make a sparse triangular array?
  Write an algorithm that adds two triangular arrays.
 
 '''
+
+def AddTriangularLists(list1, list2 , result):
+    for row in list1:
+        for col in list2:
+            result[row, col] = list1[row,col] + list2[row, col]
 
 
 #------------------------------------------------------------------------------#
@@ -156,33 +205,16 @@ How could you make a sparse triangular array?
 
 '''
 
-
-
-#------------------------------------------------------------------------------#
-
-
-# Question 14
-
-'''
-The algorithm described for adding two sparse matrices is fairly highlevel.
-Expand the algorithm to provide details in place of the instructions
-inside the angle brackets (<>). (Hint: You may want to make a separate
-CopyEntries method to copy entries from one list to another and a separate
-AddEntries method to combine the entries in two rows with the same row
-number.)
-'''
+def MultiplyLists(list1, list2, result):
+    for i in list1:
+        for j in list2:
+            # Calculate the [i, j] result
+            result[i, j] = 0
+            for k in list2:
+                resutl[i, j] = result[i, j] + list1[i,k] * list2[k,j]
+        
 
 #------------------------------------------------------------------------------#
-
-
-# Question 15
-
-'''
-At a high level, write an algorithm that effi ciently multiplies two sparse
-matrices that have default value 0.
-
-'''
-
 
 
 
