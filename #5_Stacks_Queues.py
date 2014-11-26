@@ -1,4 +1,3 @@
-# -*- coding: cp1252 -*-
 # Chapter 5 #
 #-----------#
 # Exercises #
@@ -10,9 +9,9 @@
         NextIndex1 and NextIndex2 when one of the stacks is full?
 '''
 
-"""When one of the stacks is full, NextIndex1 > NextIndex2. At that point both
-stacks are full, NextIndex1 is the index of the top item in the second stack, and
-NextIndex2 is the index of the top item in the fi rst stack."""
+#When one of the stacks is full, NextIndex1 > NextIndex2. At that point both
+#stacks are full, NextIndex1 is the index of the top item in the second stack, and
+#NextIndex2 is the index of the top item in the fi rst stack.
 
 
 
