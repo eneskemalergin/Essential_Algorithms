@@ -20,5 +20,3 @@ def MakeHeap(array):
 
             # move to the parent
             index = parent
-            
-     
