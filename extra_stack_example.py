@@ -31,4 +31,7 @@ class Stack:
     # Push an item onto the top of the stack
     def push(self, item):
         self._theItems.append(item)
-        
+
+# To call this and using:
+    # objectName = Stack()
+    # objectName.methodNameInsindeTheClass(ParameterValueIfAvailable)
