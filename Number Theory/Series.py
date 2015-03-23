@@ -46,4 +46,21 @@ def factorial(n):
 def log_binomial(n,k): 
 	return (log_fac(n)-log_fac(k)-log_fac(n-k))
 
+# Question 6
+""" How many points are there with integer coordinates that lie in the 
+circle of radius 100? """
+
+def L(radius):
+	count = 0
+	m = -radius
+	while m <= r:
+		n = -r
+		while n <=r:
+			if m*m + n*n <= r*r:
+				count += 1
+			n += 1
+		m += 1
+	return count
+
+
 
