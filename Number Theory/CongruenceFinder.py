@@ -9,7 +9,7 @@ ax = b(mod -mod-)
 
 	This is the least efficient method: 
 """
-# ax = b type
+# Type 1: ax = b type
 def congrFindV1(a, mod = 10, result = 0):
 	p=[]
 	for x in range(0,mod):               

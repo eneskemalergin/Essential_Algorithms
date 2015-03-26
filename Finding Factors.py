@@ -9,3 +9,5 @@ def FindFactors(number):
     if(number > 1):
         factors.append(number)
     return factors
+
+print(FindFactors(1204))
