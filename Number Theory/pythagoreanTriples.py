@@ -20,14 +20,15 @@ def PT(n):
 	return n		
 # Test Case
 # print(PT(100))
+
+
 """
 This is more advanced method of finding Primitive Pythagorean Triples
 
 
 """
-
 from math import sqrt
-def PPT(n):                                                 
+def PPT_faster(n):                                                 
     a, b, c = 1, 3, 0                                                       
     while c < n:                                                            
         a_ = (a * b) + a                                                    
@@ -38,5 +39,19 @@ def PPT(n):
         b += 2
 
 # Test Case
-for pt in pythagorean_triples(1000):                        
-    print(pt)
+#for pt in pythagorean_triples(1000):                        
+#    print(pt)
+
+
+# Finishs up to 1000 in ~0.8 seconds.
+def PPT_fastest(n=1000):
+    for a in xrange(1, n):
+        a2= a*a 
+        for b in xrange(a+1, n):
+            c2= a2 + b*b
+            cs= int(c2**.5)
+            if cs*cs == c2:
+                yield a, b, cs
+
+# Test Case
+print list(PPT_fastest())
