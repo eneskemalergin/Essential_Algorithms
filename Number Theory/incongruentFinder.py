@@ -19,9 +19,12 @@ def incongrFind(a, mod, result):
 	g = func[0]
 	x = func[1]
 	y = func[2]
+	list_ = []
+	if (result/g) != int:
+		return list_
 	if g != result:
 		x0 = result / g
-	list_ = []
+	
 	while g > 0:
 		list_.append(x0)
 		x0 = x0 + g * (mod/g)

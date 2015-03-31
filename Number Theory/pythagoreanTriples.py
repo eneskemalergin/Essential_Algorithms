@@ -24,8 +24,6 @@ def PT(n):
 
 """
 This is more advanced method of finding Primitive Pythagorean Triples
-
-
 """
 from math import sqrt
 def PPT_faster(n):                                                 
