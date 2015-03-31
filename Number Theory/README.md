@@ -3,8 +3,8 @@
 ## Chapters
 
 1. What is Number Theory?
-2. Pythagorean Triples
-3. Pythagorean Triples and Unit Circle
+2. [Pythagorean Triples](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/pythagoreanTriples.py)
+3. [Pythagorean Triples and Unit Circle](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/PPT_UnitCircle.py)
 4. Sums and Higher Powers and Fermat's Last Theorem
 5. Divisibility abd the GCD
 6. Linear Equations and the GCD
