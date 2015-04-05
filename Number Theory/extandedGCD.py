@@ -6,6 +6,7 @@ def extendedGCD(a, b):
         g, y, x = extendedGCD(b % a, a)
         return (g, x - (b // a) * y, y) # I didn't get it!
 
+""" Print type: (gcd(a,b), x, y) """
 print(extendedGCD(78, 42))
 
 

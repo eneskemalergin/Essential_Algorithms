@@ -11,5 +11,7 @@
 	- [Least Common Multiplier](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/lcm.py)
 	- [Least Common Multiplier for multiple inputs](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/lcmm.py)
 6. Linear Equations and the GCD
+	- [extendedGCD](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/extendedGCD.py)
+	- [Printed Version of extendedGCD](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/extendedGCD_print.py)
 7. Factorization and the Fundamental Theorem of Arithmetic
 8. [Congruences](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/incongruentFinder.py)
