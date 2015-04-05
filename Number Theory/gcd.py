@@ -11,6 +11,9 @@ def gcd(a,b):
     return a
 
 # Test Cases from Class
+
+# To test them you need to extract test cases from comment.
+"""
 print gcd(60, 144)
 print gcd(144, 60)
 print gcd(335, 780)
@@ -19,3 +22,5 @@ print gcd(1160718174, 316258250)
 # Test Cases from Book
 print gcd(12345,67890)
 print gcd(54321,9876)
+
+"""
