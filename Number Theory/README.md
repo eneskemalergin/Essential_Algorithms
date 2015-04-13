@@ -15,3 +15,5 @@
 	- [Printed Version of extendedGCD](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/extendedGCD_print.py)
 7. Factorization and the Fundamental Theorem of Arithmetic
 8. [Congruences](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/incongruentFinder.py)
+9. []()
+10. [Congruences, Powers, and Euler's Formula](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/eulerPhiFunction.py)
