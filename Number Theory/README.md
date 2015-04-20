@@ -15,5 +15,6 @@
 	- [Printed Version of extendedGCD](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/extendedGCD_print.py)
 7. Factorization and the Fundamental Theorem of Arithmetic
 8. [Congruences](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/incongruentFinder.py)
-9. []()
+9. [Congruences, Powers, and Fermat's Little Theorem]()
 10. [Congruences, Powers, and Euler's Formula](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/eulerPhiFunction.py)
+11. [Euler's Phi Function and the Chinese Remainder Theorem](https://github.com/eneskemalergin/Essential_Algorithms_Python/blob/master/Number%20Theory/ChineseRemTheorem.py)
