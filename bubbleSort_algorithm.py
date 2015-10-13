@@ -1,17 +1,22 @@
-''' Bubble Sort Algorithm '''
+''' BubbleSort Algorithm'''
+def bubbleSort(seq):
+    not_sorted = True
+    n = len(seq)
+    print "At the beginning: "
+    print seq
+    while not_sorted:
+        # If following statements fail next statement will stop the loop
+        not_sorted = False
 
-def bubbleSort(theSeq):
-    n = len(theSeq)
-    # Perform n-1 bubble operations on the sequence
-    for i in range(n-1):
-        # Bubble the largest item to the end
-        for j in range(i + n - 1):
-            if theSeq[j-1] > theSeq[j ]: # Swap the j and j + 1 items
-                temp =theSeq[j-1]
-                theSeq[j-1] = theSeq[j]
-                theSeq[j] = temp
-        print theSeq        
+        for i in range(n-1):
+            if seq[i] <= seq[i+1]:
+                continue;
+            else:
+                temp = seq[i]
+                seq[i] = seq[i+1]
+                seq[i+1] = temp
 
-
+            not_sorted = True
+            print seq
+    return seq
 bubbleSort([12, 5, 13, 8, 9, 65])
-# Index Error: List index out of range
