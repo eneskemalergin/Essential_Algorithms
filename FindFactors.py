@@ -13,5 +13,7 @@ def FindFactors(number):
     if (number > 1):
         my_list.append(number)
     return my_list
-# It is Working
-# I can remove the duplicatess from the list
+    # To Remove the duplicates
+    # return list(set(my_list))
+
+
